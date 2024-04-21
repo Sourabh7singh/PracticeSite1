@@ -1,0 +1,165 @@
+.MainLeft {
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.lifeAbout,.Specialize,.Concerns,.workExperience,.FeaturedReview {
+    border-radius: 10px;
+    border: 1px solid #DCDCDC;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.Header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #F4F7EC, #FBFCFB);
+}
+
+.text {
+    font-size: 24px;
+}
+
+.follow {
+    cursor: pointer;
+    border: 1px solid #3A643B;
+    color: #3A643B;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.lifeAboutBody {
+    padding: 10px;
+    text-align: justify;
+}
+
+.lifeAboutBody p {
+    padding: 6px;
+    color: #3335487f;
+}
+
+.lifeAboutBody legend {
+    text-align: right;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+}
+.readMore{
+    padding: 10px;
+    text-decoration: underline;
+    display: inline-block;
+    color: #333;
+}
+
+.line{
+    border: none;
+    height: 1px;
+    background-color: #3335487f; 
+    width: 30rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.lifeAboutFooter {
+    width: 80%;
+    font-size: 15px;
+}
+
+.capsule {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.Languages {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        font-size: x-large;
+    }
+}
+
+.socialMedia span {
+    padding: 10px;
+}
+
+.SpecializeBody{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.Allconcerns{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.pastExperience{
+    display: inline-block;
+    padding: 15px;
+    color: #3A643B;
+    font-size: x-large;
+}
+
+.Footercard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.places{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.FeaturedReviewBody{
+    padding: 10px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.ReviewCardLeft{
+    display: flex;
+    gap: 10px;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    /* gap: 1rem; */
+    flex-direction: column;
+    span{
+        font-size: 1.5rem;
+    }
+    p{
+        margin-top: 0.5rem;
+        color: #939393;
+    }
+}
+.stars,.details{
+    padding: 10px;
+}

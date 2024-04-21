@@ -1,0 +1,165 @@
+.MainRight {
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.Appointment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 10px 0 10px;
+    border-radius: 15px;
+    border: 1px solid #E2E2E2;
+    position: relative;
+    background-color: white;
+    font-size: 24px;
+    width: 90%;
+
+    p {
+        color: #3A643B;
+        font-weight: bold;
+    }
+}
+
+.Appointment::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    outline: black solid 3px;
+    outline-offset: 3px;
+    z-index: -1;
+}
+
+.ModeOfSession {
+    padding: 10px;
+}
+
+.ModeOfSessionheader {
+    font-size: 23px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+    .line {
+        border: none;
+        height: 1px;
+        background-color: #3335487f;
+        width: 17rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+}
+
+.ModeOfSessionbody {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ModeOfSessionLink {
+    padding: 15px;
+    min-width: 100px;
+    border: 1px solid #E5E5E5;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+
+    p {
+        font-size: 14px;
+        padding-top: 5px;
+        color: #606060;
+    }
+}
+
+.TimeSlot {}
+
+.TimeSlotheader {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    padding: 10px;
+    gap: 1rem;
+
+    .line {
+        border: none;
+        height: 1px;
+        background-color: #3335487f;
+        width: 23rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.TimeSlotbody {
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.TimeSlotLink {
+    min-width: 100px;
+    border: 1px solid #E5E5E5;
+    border-radius: 15px;
+    padding: 10px;
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.Timings {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.Morning {
+    height: fit-content;
+    .header {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .slots{
+        padding: 10px;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .capsule{
+        padding: 15px 10px 15px 10px;
+        margin: 10px;
+        border-radius: 15px;
+        border: 1px solid #EBEBEB;
+    }
+}
+
+.BookingBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.Booking{
+    font-size: 23px;
+    background-color: #3A643B;
+    padding: 10px;
+    width: 70%;
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
