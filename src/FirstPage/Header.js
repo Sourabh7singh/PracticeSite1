@@ -2,9 +2,13 @@ import React from 'react'
 import styles from '../CSS/Header.module.css'
 import Headerbg from '../Assets/Headerbg.png'
 import ProfilePic from '../Assets/ProfilePic.png'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 const Header = () => {
     return (
         <div className={`${styles.header}`}>
+            <ToastContainer/>
             <div className={`${styles.upper}`}>
                 <img src={Headerbg} alt="" />
             </div>
@@ -38,7 +42,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={`${styles.button}`}>
-                    <button>Book Appointment</button>
+                    <button onClick={()=>{toast.success("Your Appointment has been Confirmed")}}>Book Appointment</button>
                 </div>
             </div>
         </div>

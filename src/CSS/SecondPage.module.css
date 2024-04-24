@@ -63,6 +63,7 @@
 
 .arrow,.searchIcon{
     position: absolute;
+    cursor: pointer;
     top: 50%;
     right: 5px;
     transform: translateY(-50%);
@@ -99,6 +100,7 @@
     border: 1px solid #D4D4D4;
     border-radius: 20px;
     padding: 14px;
+    padding-right: 25px;
 }
 .cards{
     display: flex;
@@ -151,6 +153,7 @@
     gap: 1rem;
 }
 .box{
+    cursor: pointer;
     text-align: center;
     padding: 10px;
     border: 1px solid #3A643B;
@@ -158,6 +161,14 @@
     p{
         color: #3A643B;
         font-weight: bolder;
+    }
+}
+.box:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: #3A643B;
+    color: white;
+    p{
+        color: white;
     }
 }
 
@@ -182,8 +193,19 @@
     color: #3A643B;
     background-color: white;
 }
+.button:nth-child(1):hover{
+    transition: all 0.2s ease-in-out;
+    background-color: #3A643B;
+    color: white;
+}
 
 .button:nth-child(2){
     color: white;
     background-color: #3A643B;
+}
+
+.button:nth-child(2):hover{
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    color: #3A643B;
 }

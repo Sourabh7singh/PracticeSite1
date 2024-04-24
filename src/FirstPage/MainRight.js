@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../CSS/MainRight.module.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const MainRight = () => {
+    const [session,setSession]=useState(null);
+    const [timings,setTimings]=useState(null);
+    const [slots,setSlots]=useState(null);
     return (
         <div className={`${styles.MainRight}`}>
+            <ToastContainer/>
             <div className={`${styles.Appointment}`}>
                 <h2>Appointment Fee</h2>
                 <p>₹699.00</p>
@@ -12,17 +18,17 @@ const MainRight = () => {
                     <h2>Select your mode of session <hr className={`${styles.line}`} /></h2>
                 </div>
                 <div className={`${styles.ModeOfSessionbody}`}>
-                    <div className={`${styles.ModeOfSessionLink}`}>
+                    <div className={`${styles.ModeOfSessionLink} ${session==="In-Clinic" && "bg-success text-light"} `} onClick={()=>setSession("In-Clinic")}>
                         <h2>In-Clinic</h2>
-                        <p>45 Mins</p>
+                        <p className={`${session==="In-Clinic" && "text-light"}`}>45 Mins</p>
                     </div>
-                    <div className={`${styles.ModeOfSessionLink}`}>
+                    <div className={`${styles.ModeOfSessionLink} ${session === "Video"&&"bg-success text-light"} `} onClick={()=>setSession("Video")}>
                         <h2>Video</h2>
-                        <p>45 Mins</p>
+                        <p className={`${session ==="Video"&&"text-light"}`}>45 Mins</p>
                     </div>
-                    <div className={`${styles.ModeOfSessionLink}`}>
+                    <div className={`${styles.ModeOfSessionLink} ${session ==="Chat"&&"bg-success text-light"} `} onClick={()=>setSession("Chat")}>
                         <h2>Chat</h2>
-                        <p>10 Mins</p>
+                        <p className={`${session ==="Chat"&&"text-light"}`}>10 Mins</p>
                     </div>
                 </div>
             </div>
@@ -41,17 +47,17 @@ const MainRight = () => {
                     </div>
                 </div>
                 <div className={`${styles.TimeSlotbody}`}>
-                    <div className={`${styles.TimeSlotLink}`}>
+                    <div className={`${styles.TimeSlotLink} ${slots==="Monday, 10 Oct" && "bg-success text-light"}`} onClick={()=>setSlots("Monday, 10 Oct")}>
                         <h2>Monday, 10 Oct</h2>
-                        <p>10 slots</p>
+                        <p className={`${slots==="Monday, 10 Oct" && "text-light"}`}>10 slots</p>
                     </div>
-                    <div className={`${styles.TimeSlotLink}`}>
+                    <div className={`${styles.TimeSlotLink} ${slots==="Tuesday, 11 Oct" && "bg-success text-light"}`} onClick={()=>setSlots("Tuesday, 11 Oct")}>
                         <h2>Tuesday, 11 Oct</h2>
-                        <p>02 slots</p>
+                        <p className={`${slots==="Tuesday, 11 Oct" && "text-light"}`}>02 slots</p>
                     </div>
-                    <div className={`${styles.TimeSlotLink}`}>
+                    <div className={`${styles.TimeSlotLink} ${slots==="Wednesday, 12 Oct" && "bg-success text-light"}`} onClick={()=>setSlots("Wednesday, 12 Oct")}>
                         <h2>Wednesday, 12 Oct</h2>
-                        <p>05 slots</p>
+                        <p className={`${slots==="Wednesday, 12 Oct" && "text-light"}`}>05 slots</p>
                     </div>
                 </div>
             </div>
@@ -61,12 +67,12 @@ const MainRight = () => {
                         <h2>Morning</h2>
                     </div>
                     <div className={`${styles.slots}`}>
-                        <span className={`${styles.capsule}`}>09:00 AM</span>
-                        <span className={`${styles.capsule}`}>09:30 AM</span>
-                        <span className={`${styles.capsule}`}>10:00 AM</span>
-                        <span className={`${styles.capsule}`}>10:15 AM</span>
-                        <span className={`${styles.capsule}`}>10:45 AM</span>
-                        <span className={`${styles.capsule}`}>11:00 AM</span>
+                        <span className={`${styles.capsule} ${timings==="09:00 AM" && "bg-success text-light"}`} onClick={()=>setTimings("09:00 AM")}>09:00 AM</span>
+                        <span className={`${styles.capsule} ${timings==="09:30 AM" && "bg-success text-light"}`} onClick={()=>setTimings("09:30 AM")}>09:30 AM</span>
+                        <span className={`${styles.capsule} ${timings==="10:00 AM" && "bg-success text-light"}`} onClick={()=>setTimings("10:00 AM")}>10:00 AM</span>
+                        <span className={`${styles.capsule} ${timings==="10:30 AM" && "bg-success text-light"}`} onClick={()=>setTimings("10:30 AM")}>10:15 AM</span>
+                        <span className={`${styles.capsule} ${timings==="11:00 AM" && "bg-success text-light"}`} onClick={()=>setTimings("11:00 AM")}>10:45 AM</span>
+                        <span className={`${styles.capsule} ${timings==="11:30 AM" && "bg-success text-light"}`} onClick={()=>setTimings("11:30 AM")}>11:00 AM</span>
                     </div>
                 </div>
                 <div className={`${styles.Morning}`}>
@@ -74,16 +80,16 @@ const MainRight = () => {
                         <h2>Evening</h2>
                     </div>
                     <div className={`${styles.slots}`}>
-                        <span className={`${styles.capsule}`}>04:00 PM</span>
-                        <span className={`${styles.capsule}`}>04:15 PM</span>
-                        <span className={`${styles.capsule}`}>04:30 PM</span>
-                        <span className={`${styles.capsule}`}>04:45 PM</span>
-                        <span className={`${styles.capsule}`}>05:15 PM</span>
+                        <span className={`${styles.capsule} ${timings==="04:00 PM" && "bg-success text-light"}`} onClick={()=>setTimings("04:00 PM")}>04:00 PM</span>
+                        <span className={`${styles.capsule} ${timings==="04:15 PM" && "bg-success text-light"}`} onClick={()=>setTimings("04:15 PM")}>04:15 PM</span>
+                        <span className={`${styles.capsule} ${timings==="04:30 PM" && "bg-success text-light"}`} onClick={()=>setTimings("04:30 PM")}>04:30 PM</span>
+                        <span className={`${styles.capsule} ${timings==="04:45 PM" && "bg-success text-light"}`} onClick={()=>setTimings("04:45 PM")}>04:45 PM</span>
+                        <span className={`${styles.capsule} ${timings==="05:15 PM" && "bg-success text-light"}`} onClick={()=>setTimings("05:15 PM")}>05:15 PM</span>
                     </div>
                 </div>
             </div>
             <div className={`${styles.BookingBtn}`}>
-                <button className={`${styles.Booking}`}>Make An Appointment</button>
+                <button className={`${styles.Booking}`} onClick={()=>{toast.success("Your Appointment has been Confirmed")}}>Make An Appointment</button>
             </div>
         </div>
     )

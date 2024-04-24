@@ -82,7 +82,6 @@
     }
 }
 
-.TimeSlot {}
 
 .TimeSlotheader {
     display: flex;
@@ -144,6 +143,7 @@
         margin: 10px;
         border-radius: 15px;
         border: 1px solid #EBEBEB;
+        cursor: pointer;
     }
 }
 

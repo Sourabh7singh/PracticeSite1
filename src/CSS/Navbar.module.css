@@ -15,6 +15,7 @@
 }
 
 .navlinks{
+    cursor: pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
     text-decoration: none;
@@ -38,8 +39,19 @@
     color: #3A643B;
     background:#FFF7E2 ;
 }
+.right button:nth-child(1):hover{
+    transition: all 0.3s ease-in-out;
+    color: #FFF7E2;
+    background-color: #3A643B;
+}
 
 .right button:nth-child(2){
     color: #FFF7E2;
     background-color: #3A643B;
+}
+
+.right button:nth-child(2):hover{
+    transition: all 0.3s ease-in-out;
+    color: #3A643B;
+    background-color: #FFF7E2;
 }
