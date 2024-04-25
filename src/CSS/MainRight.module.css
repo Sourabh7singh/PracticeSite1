@@ -68,6 +68,7 @@
 }
 
 .ModeOfSessionLink {
+    cursor: pointer;
     padding: 15px;
     min-width: 100px;
     border: 1px solid #E5E5E5;
@@ -109,6 +110,7 @@
 }
 
 .TimeSlotLink {
+    cursor: pointer;
     min-width: 100px;
     border: 1px solid #E5E5E5;
     border-radius: 15px;
